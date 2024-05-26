@@ -1,0 +1,7 @@
+<dftd-popup name="sub_ecard_popup">
+	<element x="4" y="79">
+		<day>recognition_card_popup_daylight.jpg|png</day>
+		<night>recognition_card_popup_redlight.jpg|png</night>
+	</element>
+</dftd-popup>
+

@@ -1,0 +1,5 @@
+<dftd-display name="logbook_display">
+	<element x="0" y="0">
+		<day>shipslog_main_daylight.jpg</day>
+	</element>
+</dftd-display>

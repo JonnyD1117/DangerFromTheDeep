@@ -1,0 +1,7 @@
+<dftd-popup name="sub_recogmanual_popup">
+	<element x="0" y="49">
+		<day>shiprecog_popup_daylight.png</day>
+		<night>shiprecog_popup_redlight.png</night>
+	</element>
+</dftd-popup>
+

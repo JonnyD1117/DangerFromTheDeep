@@ -1,0 +1,6 @@
+<dftd-display name="ships_sunk_display">
+	<element x="0" y="0">
+		<tiles x="1024" y="768"/>
+		<day>background.jpg</day>
+	</element>
+</dftd-display>

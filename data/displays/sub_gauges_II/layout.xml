@@ -1,0 +1,59 @@
+<dftd-display name="sub_gauges_display">
+	<day>daylight_controlscreen_</day>
+	<night>redlight_controlscreen_</night>
+	<element x="0" y="0">
+		<file>background.jpg</file>
+	</element>
+	<element x="87" y="378" id="1">
+		<size x="338" y="338"/>
+		<day>compass_outer_masked.png</day>
+	</element>
+	<element x="563" y="550" id="2">
+		<size x="148" y="148"/>
+		<scale pointer="270">
+			<start angle="212" value="-30"/>
+			<end angle="328" value="30"/>
+		</scale>
+		<file>pointers_bow_depth_rudder.png</file>
+	</element>
+	<element x="795" y="550" id="3">
+		<size x="148" y="148"/>
+		<scale pointer="90">
+			<start angle="32" value="-30"/>
+			<end angle="148" value="30"/>
+		</scale>
+		<file>pointers_stern_depth_rudder.png</file>
+	</element>
+	<element x="390" y="52" id="4">
+		<size x="270" y="270"/>
+		<scale pointer="0">
+			<start angle="225" value="0"/>
+			<end angle="135" value="200"/>
+		</scale>
+		<file>pointers_depth.png</file>
+	</element>
+	<element x="779" y="96" id="5"><!--y=95 center 845,162-->
+		<size x="132" y="132"/>
+		<scale pointer="0">
+			<start angle="229" value="0"/>
+			<end angle="131" value="22"/>
+		</scale>
+		<file>pointers_knots.png</file>
+	</element>
+	<element x="681" y="337" id="6">
+		<size x="152" y="152"/>
+		<scale pointer="0">
+			<start angle="270" value="-30"/>
+			<end angle="90" value="30"/>
+		</scale>
+		<file>pointers_main_rudder.png</file>
+	</element>
+	<element x="88" y="93" id="7">
+		<size x="173" y="173"/>
+		<scale pointer="180">
+			<start angle="45" value="0"/>
+			<end angle="315" value="15"/>
+		</scale>
+		<file>pointers_mt.png</file>
+	</element>
+</dftd-display>

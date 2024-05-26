@@ -1,0 +1,18 @@
+<dftd-display name="sub_damage_display">
+	<element x="0" y="0">
+		<day>damage_screen_backg.jpg</day>
+	</element>
+	<element x="0" y="140">
+		<day>sub_damage_scheme_all.png</day>
+	</element>
+	<element x="0" y="0" id="0" visible="-1">
+		<phases>
+			<phase>light</phase>
+			<phase>medium</phase>
+			<phase>heavy</phase>
+			<phase>critical</phase>
+			<phase>wrecked</phase>
+		</phases>
+		<day>repair%u.png</day>
+	</element>
+</dftd-display>

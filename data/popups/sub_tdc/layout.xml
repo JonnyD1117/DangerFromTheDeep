@@ -1,0 +1,7 @@
+<dftd-popup name="sub_tdc_popup">
+	<element x="8" y="134">
+		<day>popup_TDC_daylight.jpg|png</day>
+		<night>popup_TDC_redlight.jpg|png</night>
+	</element>
+</dftd-popup>
+

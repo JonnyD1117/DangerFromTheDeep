@@ -1,0 +1,26 @@
+<dftd-display name="sub_periscope_display">
+	<element x="467" y="586" id="0">
+		<slider x="-1411" start="0" end="360"/>
+		<day>periscope_compassbar.png</day>
+	</element>
+	<element x="0" y="0">
+		<day>periscope_daylight.jpg|png</day>
+		<night>periscope_redlight.jpg|png</night>
+	</element>
+	<element x="930" y="278" id="1">
+		<center x="946" y="294"/>
+		<scale pointer="0">
+			<start angle="0" value="0"/>
+			<end angle="360" value="12"/>
+		</scale>
+		<day>clock_hours_pointer.png</day>
+	</element>
+	<element x="914" y="262" id="2">
+		<center x="946" y="294"/>
+		<scale pointer="0">
+			<start angle="0" value="0"/>
+			<end angle="360" value="60"/>
+		</scale>
+		<day>clock_minutes_pointer.png</day>
+	</element>
+</dftd-display>

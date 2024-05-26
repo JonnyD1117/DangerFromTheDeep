@@ -1,0 +1,123 @@
+We need height values for the whole terrain not only to render it but also
+to check for maximum dive depth. The data is available with various
+resolution, sometimes even down to several hundred meters. However storing
+that large amount of data and distributing it with the game is very
+problematic, therefore we need some data reduction and compression.
+Store heights as quadtree?
+
+To draw the map this is not sufficient though. When rendering the terrain we
+are also more interested in the shoreline than the whole terrain itself. For
+a naval simulation it doesn't matter how the terrain looks farer inward
+except some mountains. We rather need the part with depths between 0 and
+300m in some accuracy (generated fractal data added to coarse real data is
+also ok) and the rest is rather the coastline.
+
+So for 3d rendering we rather need to combine elevation data and coastline
+data.
+
+The coastline data is available as LGPL data with high resolution. We need
+to compress it to make use of it.
+The data is delivered as polygons. CHECK THAT
+We need to convert the polygons to a multi resolution data set. Resample
+them every N meters and store that (i.e. 10km or more). Interpolate the
+existing positions by splines (i.e. cubic hermite or others) and compute a
+subdivision position and normal vector. Intersect from that position with
+original line and use intersection that is closed to half length of the
+line. Store the offset along normal (so only one value per new vertex, not
+2!). We can even use some quantization for this. With the computed position
+repeat the process until the remaining edge length is small enough.
+We can even directly triangulate the results.
+If the map shows only a part, intersect the rectangle of the map with the
+data to triangulate only a smaller part of it.
+We can stop when detail is small enough or data is large enough.
+
+This may also help in conversion to new GPU...
+
+Note that polygons may enclose other polygons (lakes). But the data already
+contains information about that!
+
+How to convert WGS84 latitude/longitude values?! Microdegrees in int32_t.
+One degree at equator is 40032/360km, micro is one ppm, so 11cm accuracy,
+way enough.
+And we need to cut it to the area that we use for dftd.
+
+When we render a rectangular subset of the map it would be very costly to
+compute intersection of that rectangle with all coast lines as there are
+tens of thousands of islands. Therefore we partition the coast lines in
+segments (squares or rectangles). We determine for each segment if it is
+fully land or sea and intersect with the coast lines. Then we store the
+intersections with the segment borders with the segment. If a coast line is
+not closed, complete it with the segment borders. Lines are always oriented
+in the same direction (counter clock wise).
+Segment size could be one degree for example (~111km).
+Then we need to store per segment only if it is fully land or sea or has
+coast lines and a list of lines.
+Original lines have a length and are resampled with a fix coarse length. New
+detail is added with cubic hermite splines. Existing edges are halfed and
+the mid position is computed by spline and an offset along the normal
+(closest intersection of original line according to length).
+
+Limit to certain degrees:
+100W, 45E, 80N, 30S.
+Do not store all that unnecessary detail of all islands in Canada, rather
+cut by an ice line.
+
+Store meters relative to segment offset for more precision?
+
+1) Write test program that reads the data and renders it as lines to screen,
+with some move/scroll possibility.
+2) Convert to compressed format
+
+
+
+Conversion from GSHHG data to our own format
+============================================
+
+Read in all shore lines as line strip / polygon (2D).
+Only keep the lines marked with flag 1 (land), no lakes or so,
+no Antarctica lines.
+Create some ice line for the Arctic/Canada to reduce data (later).
+Iterate every line and find intersection of line with cell border, a cell is
+one degree wide and high. If there is no intersection we have an island
+completely contained in a cell. In that case process that line. If we find
+an intersection iterate from there to next cell border intersection. Only
+treat it as intersection if it is not only touching the cell border. Every
+line segment inside a cell is added to that cell with new points created on
+cell borders. All line segments of a cell need to get processed before
+storing. Either we add the corners of a cell and create a closed segment or
+we keep just the line. But creating more detail is difficult and wrong if
+the corners of a cell are added to the line.
+Then iterate all cells. If a cell has no shorelines, determine if it is
+land or sea. This can be done later by flood fill. First iterate all cells
+with shore lines. Determine for every corner if it is land or sea (or on
+shoreline, rare but possible case) by checking the lines. We sort them by
+the position on the border and by their order we can tell if the corner is
+sea or land. When triangulating later we need to group several lines and
+corners to get one closed shape. This is done by iterating the border of the
+cell (haven't we done such an algorithm already in coastmap??).
+When we know for cell corners whether they are sea or land then set the
+neighboring corners of cells that have no shorelines with a flood fill
+algorithm.
+Per cell store one flag (3 values: full land, full sea, has shorelines,
+maybe full ice as 4th). If has shorelines the number of shorelines follow
+(maybe 16bit sufficient). Every shoreline is stored as list of positions.
+New positions at half length of every edge follow, up until finest level.
+This takes more RAM but can be compressed well on disk. We need some zlib
+for that (do not use bz2 lib).
+
+Processing a (shore) line
+=========================
+Compute the length of the line (summing edge lengths) and compute number of
+coarse edges to use so that 2^n times coarse edges matches finest used edge
+length closely. Resample the line to that number of coarse edges. For the
+number of levels iterate and for every level iterate the existing points or
+line segments. Compute subdivision position with spline and difference along
+normal direction to original line (intersection of ray and line strip, take
+closest intersection to mid of length). Store that and repeat.
+
+Maybe we need some 2d poly line class for this, the polygon class is 3d and
+doesn't fit well. Several algorithms can be used similarly though.
+
+Later we need functions to compute a full resolution of some detail of a
+poly line, at least for a part of it within a certain rectangle.
+`

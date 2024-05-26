@@ -1,0 +1,5 @@
+<dftd-display name="sub_recogmanual_display">
+	<element x="0" y="0">
+		<day>shiprecogmanual_background.jpg</day>
+	</element>
+</dftd-display>

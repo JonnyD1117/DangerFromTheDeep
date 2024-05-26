@@ -1,0 +1,13 @@
+#!/bin/bash
+PACKAGE="dangerdeep-latest-data"
+DIST="karmic"
+
+ADD="data"
+ADD="${ADD}:packaging/ubuntu/daily/data/debian/"
+REMOVE="data/LICENSE"
+
+DPKG_ARGS="-I.svn -ICVS"
+PUT="ppa:aegirxx-googlemail/dftd-latest"
+
+
+

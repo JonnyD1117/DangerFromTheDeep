@@ -1,0 +1,85 @@
+<dftd-display name="sub_tdc2_display">
+	<day>TDCScreen2_Daylight_</day>
+	<night>TDCScreen2_Redlight_</night>
+	<element x="0" y="0">
+		<file>base_image.jpg</file>
+	</element>
+	<element x="81" y="605" id="0" visible="0">
+		<file>tube1_on.png</file>
+	</element>
+	<element x="203" y="605" id="1" visible="0">
+		<file>tube2_on.png</file>
+	</element>
+	<element x="324" y="605" id="2" visible="0">
+		<file>tube3_on.png</file>
+	</element>
+	<element x="446" y="605" id="3" visible="0">
+		<file>tube4_on.png</file>
+	</element>
+	<element x="569" y="605" id="4" visible="0">
+		<file>tube5_on.png</file>
+	</element>
+	<element x="693" y="605" id="5" visible="0">
+		<file>tube6_on.png</file>
+	</element>
+	<element x="68" y="92" id="6" visible="0">
+		<file>FireButton_ON.png</file>
+	</element>
+	<element x="900" y="285" id="7">
+		<phases>
+			<phase>auto</phase>
+			<phase>manual</phase>
+		</phases>
+		<file>AutoManualKnob_%umode.png</file>
+	</element>
+	<element x="383" y="406" id="8">
+		<center x="431" y="455"/>
+		<file>HGyro_pointer_main_rotating.png</file>
+	</element>
+	<element x="188" y="378" id="9">
+		<center x="212" y="455"/>
+		<file>HGyro_pointer_refinement_rotating.png</file>
+	</element>
+	<element x="897" y="478" id="10">
+		<center x="911" y="526"/>
+		<file>Brightness_dial_pointer_rotating.png</file>
+	</element>
+	<element x="695" y="373" id="11">
+		<center x="721" y="453"/>
+		<file>VGyro_pointer_main_rotating.png</file>
+	</element>
+	<element x="696" y="152" id="12">
+		<center x="721" y="233"/>
+		<file>VGyro_pointer_refinement_rotating.png</file>
+	</element>
+	<!-- todo later use them
+	<element x="" y="" id="13">
+		<center x="" y=""/>
+		<file>VGyro_main_user_marker_rotating.png</file>
+	</element>
+	<element x="" y="" id="14">
+		<center x="" y=""/>
+		<file>VGyro_refinement_user_marker_rotating.png</file>
+	</element>
+	-->
+	<element x="317" y="98" id="15">
+		<center x="341" y="194"/>
+		<scale pointer="0">
+			<start angle="11" value="3"/>
+			<end angle="342" value="100"/>
+			<!-- fixme nonlinear, but more than quadratic -->--
+			<!-- angles 11/3 62/5 120/10 160/20 204/30 262/50 342/100 -->
+		</scale>
+		<file>Zielentfernung_pointer_rotating.png</file>
+	</element>
+	<element x="325" y="295" id="16">
+		<center x="341" y="194"/>
+		<scale pointer="180">
+			<start angle="11" value="3"/>
+			<end angle="342" value="100"/>
+			<!-- fixme nonlinear, but more than quadratic -->--
+			<!-- angles 11/3 62/5 120/10 160/20 204/30 262/50 342/100 -->
+		</scale>
+		<file>Zielentfernung_user_marker_rotating.png</file>
+	</element>
+</dftd-display>

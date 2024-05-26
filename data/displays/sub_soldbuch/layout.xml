@@ -1,0 +1,16 @@
+<dftd-display name="sub_soldbuch_display">
+	<element x="0" y="0">
+		<day>soldbuchscreen_background.jpg</day>
+	</element>
+	<element x="250" y="200" id="0">
+		<phases nr="11" offset="1"/>
+		<day>photo_stamp%u.jpg|png</day>
+	</element>
+	<element x="600" y="170" id="1">
+		<day>soldbuch_primaryoverlay.png</day>
+	</element>
+	<element x="600" y="170" id="2">
+		<phases nr="7" offset="1939"/>
+		<day>stamp%u.png</day>
+	</element>
+</dftd-display>

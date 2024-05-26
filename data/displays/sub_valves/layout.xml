@@ -1,0 +1,7 @@
+<dftd-display name="sub_valves_display">
+	<element x="0" y="0">
+		<day>valves_screen_daylight_t7cv1.jpg</day>
+		<night>valves_screen_redlight_t7cv1.jpg</night>
+	</element>
+	<!-- todo add more elements here -->
+</dftd-display>

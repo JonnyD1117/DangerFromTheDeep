@@ -1,0 +1,20 @@
+<dftd-display name="sub_kdb_display">
+	<day>KDB_daylight_</day>
+	<night>KDB_redlight_</night>
+	<element x="0" y="0">
+		<file>background.jpg</file>
+	</element>
+	<element x="323" y="122" id="0">
+		<center x="377" y="373"/>
+		<file>pointer.png</file>
+	</element>
+	<element x="166" y="682" id="1">
+		<phases nr="6" offset="1"/>
+		<file>gauge%u.png</file>
+	</element>
+	<element x="683" y="667" id="2">
+		<phases nr="6" offset="1" by_angle="360"/>
+		<file>knob%u.png</file>
+	</element>
+</dftd-display>
+

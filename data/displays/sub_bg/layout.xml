@@ -1,0 +1,16 @@
+<dftd-display name="sub_bg_display">
+	<day>BG_daylight_</day>
+	<night>BG_redlight_</night>
+	<element x="0" y="0">
+		<file>background.jpg</file>
+	</element>
+	<element x="341" y="153" id="0">
+		<center x="373" y="346"/>
+		<file>pointer.png</file>
+	</element>
+	<element x="110" y="641" id="1">
+		<phases nr="6" offset="1" by_angle="360"/>
+		<file>knob_pos%u.png</file>
+	</element>
+</dftd-display>
+

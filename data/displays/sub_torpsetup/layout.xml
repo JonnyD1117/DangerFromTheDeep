@@ -1,0 +1,100 @@
+<dftd-display name="sub_torpsetup_display">
+	<day>torpsetup_daylight_</day>
+	<night>torpsetup_redlight_</night>
+	<element x="513" y="364" id="0">
+		<slider x="78" start="0" end="35"/>
+		<file>tempscale.png</file>
+	</element>
+	<element x="541" y="77" id="1">
+		<center x="636" y="172"/>
+		<scale pointer="0" clockwise="0">
+			<start angle="0" value="0"/>
+			<end angle="330" value="55"/>
+		</scale>
+		<file>torpspeed.png</file>
+	</element>
+	<element x="231" y="508" id="2">
+		<center x="381" y="658"/>
+		<scale pointer="0" clockwise="0">
+			<start angle="0" value="1600"/>
+			<end angle="320" value="3200"/>
+		</scale>
+		<file>primaryrunlength.png</file>
+	</element>
+	<element x="469" y="508" id="3">
+		<center x="619" y="658"/>
+		<scale pointer="0" clockwise="0">
+			<start angle="0" value="0"/>
+			<end angle="324" value="180"/>
+		</scale>
+		<file>turnangle.png</file>
+	</element>
+	<element x="0" y="0">
+		<file>background.jpg|png</file>
+	</element>
+	<element x="609" y="66" id="4">
+		<center x="638" y="169"/>
+		<scale pointer="0">
+			<start angle="30" value="0"/>
+			<end angle="330" value="25"/>
+		</scale>
+		<file>rundepthptr.png</file>
+	</element>
+	<element x="228" y="157" id="5">
+		<center x="257" y="262"/>
+		<scale pointer="0">
+			<start angle="21" value="0"/>
+			<end angle="339" value="1600"/>
+		</scale>
+		<file>secondaryrangeptr.png</file>
+	</element>
+	<element x="241" y="90" id="6">
+		<center x="260" y="263"/>
+		<scale pointer="0">
+			<start angle="21" value="0"/>
+			<end angle="339" value="1600"/>
+		</scale>
+		<file>primaryrangeptr.png</file>
+	</element>
+	<element x="834" y="251" id="7">
+		<phases>
+			<phase>slow</phase>
+			<phase>medium</phase>
+			<phase>high</phase>
+		</phases>
+		<file>speed%u.png</file>
+	</element>
+	<element x="64" y="574" id="8">
+		<phases>
+			<phase>left</phase>
+			<phase>right</phase>
+		</phases>
+		<file>turn%u.png</file>
+	</element>
+	<element x="803" y="552" id="9">
+		<phases>
+			<phase>short</phase>
+			<phase>long</phase>
+		</phases>
+		<file>secondaryrange_%u.png</file>
+	</element>
+	<element x="730" y="377" id="10">
+		<phases>
+			<phase>off</phase>
+			<phase>on</phase>
+		</phases>
+		<file>preheat%u.png</file>
+	</element>
+	<element x="277" y="571" id="11">
+		<phases nr="6" offset="1" by_angle="360"/>
+		<file>primaryrangeknobs%u.png</file>
+	</element>
+	<element x="528" y="571" id="12">
+		<phases nr="6" offset="1" by_angle="360"/>
+		<file>turnangleknobs%u.png</file>
+	</element>
+	<element x="819" y="17" id="13">
+		<phases nr="6" offset="1" by_angle="360"/>
+		<file>rundepthknobs%u.png</file>
+	</element>
+</dftd-display>

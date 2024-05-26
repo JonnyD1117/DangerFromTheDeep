@@ -1,0 +1,69 @@
+add_library(dftdmedia STATIC
+	bzip.cpp	# only for terrain, remove later
+	bzip.hpp		# only for terrain, remove later
+	caustics.cpp
+	caustics.hpp
+	daysky.cpp
+	daysky.hpp
+	fixed.hpp
+	font.cpp
+	font.hpp
+	fpsmeasure.cpp
+	fpsmeasure.hpp
+	fractal.hpp
+	framebufferobject.cpp
+	framebufferobject.hpp
+	frustum.cpp
+	frustum.hpp
+	geoclipmap.cpp
+	geoclipmap.hpp
+	#gpu_helper.cpp	# problems with image, two versions from two branches, maybe use different subdirectory for that.
+	#gpu_helper.hpp
+	#gpu_interface.cpp
+	#gpu_interface.hpp
+	#gpu_mesh.cpp
+	#gpu_mesh.hpp
+	#gpu_model.cpp
+	#gpu_model.hpp
+	height_generator.hpp
+	image.cpp
+	image.hpp
+	make_mesh.cpp
+	make_mesh.hpp
+	model.cpp
+	model.hpp
+	moon.cpp
+	moon.hpp
+	morton_bivector.hpp
+	music.cpp
+	music.hpp
+	perlinnoise.cpp
+	perlinnoise.hpp
+	postprocessor.cpp
+	postprocessor.hpp
+	primitives.cpp
+	primitives.hpp
+	shader.cpp
+	shader.hpp
+	sky.cpp
+	sky.hpp
+	stars.cpp
+	stars.hpp
+	simplex_noise.cpp
+	simplex_noise.hpp
+	system_interface.cpp
+	system_interface.hpp
+	terrain.hpp
+	texture.cpp
+	texture.hpp
+	tone_reproductor.cpp
+	tone_reproductor.hpp
+	vertexbufferobject.cpp
+	vertexbufferobject.hpp
+	water.cpp
+	water.hpp
+	widget.cpp
+	widget.hpp
+)
+target_link_libraries(dftdmedia dftdbasic dftdcore ${BZIP2_LIBRARY})
+target_include_directories(dftdmedia PUBLIC ../base ../core ../ .)

@@ -1,0 +1,55 @@
+add_library(dftdcore STATIC
+	ai.cpp
+	ai.hpp
+	airplane.cpp
+	airplane.hpp
+	convoy.cpp
+	convoy.hpp
+	countrycodes.cpp
+	countrycodes.hpp
+	date.cpp
+	date.hpp
+	depth_charge.cpp
+	depth_charge.hpp
+	event.cpp
+	event.hpp
+	game.cpp
+	game_editor.cpp
+	game_editor.hpp
+	game.hpp
+	#generic_rudder.cpp # newer code, that doesn't work yet. Still a subclass of ship atm
+	#generic_rudder.hpp
+	gun_shell.cpp
+	gun_shell.hpp
+	highscorelist.cpp
+	highscorelist.hpp
+	logbook.hpp
+	ocean_wave_generator.hpp
+	particle.cpp
+	particle.hpp
+	sea_object.cpp
+	sea_object.hpp
+	sea_object_id.hpp
+	sensors.cpp
+	sensors.hpp
+	ship.cpp
+	ship.hpp
+	sonar.cpp
+	sonar.hpp
+	sonar_operator.cpp
+	sonar_operator.hpp
+	submarine.cpp
+	submarine.hpp
+	tdc.cpp
+	tdc.hpp
+	texts.cpp
+	texts.hpp
+	tile_cache.hpp
+	tile.hpp
+	torpedo.cpp
+	torpedo.hpp
+	water_splash.cpp
+	water_splash.hpp
+)
+target_link_libraries(dftdcore dftdbasic dftdmedia) # need to link media because game needs bzip_streambuf from it, later break these dependencies!
+target_include_directories(dftdcore PUBLIC ../base .. ../media ../ui .) # needs include .. for global_data, ugly; and media for model, also ugly; and needs ui because of event, even more ugly; and it needs itself because of reverse include

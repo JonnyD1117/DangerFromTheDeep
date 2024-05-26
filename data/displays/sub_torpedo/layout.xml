@@ -1,0 +1,77 @@
+<dftd-display name="sub_torpedo_display">
+	<day>torpmanage_</day>
+	<element x="0" y="0">
+		<day>tmanage_cleanbase_daylight.jpg</day>
+		<night>tmanage_cleanbase_redlight.jpg</night>
+	</element>
+	<element x="0" y="0" id="21">
+		<day>tmanage_cleanbase_redlight.jpg</day><!--some existing file, is replaced ingame-->
+	</element>
+	<element x="0" y="0" visible="-1" id="0">
+		<file>emptytube.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="1">
+		<file>tubeload.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="2">
+		<file>tubeunload.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="3">
+		<file>torp1fat1.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="4">
+		<file>torp1lut1.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="5">
+		<file>torp1lut2.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="6">
+		<file>torp1.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="7">
+		<file>torp1practice.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="8">
+		<file>torp2.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="9">
+		<file>torp3afat2.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="10">
+		<file>torp3alut1.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="11">
+		<file>torp3alut2.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="12">
+		<file>torp3fat2.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="13">
+		<file>torp3.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="14">
+		<file>torp4.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="15">
+		<file>torp5b.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="16">
+		<file>torp5.png</file>
+	</element>
+	<element x="0" y="0" visible="-1" id="17">
+		<file>torp6lut1.png</file>
+	</element>
+	<!-- torp t11 missing yet -->
+	<element x="864" y="548" id="18">
+		<center x="870" y="620"/>
+		<day>tmanage_hours_pointer.png</day>
+	</element>
+	<element x="865" y="527" id="19">
+		<center x="870" y="620"/>
+		<day>tmanage_minutes_pointer.png</day>
+	</element>
+	<element x="864" y="524" id="20">
+		<center x="870" y="620"/>
+		<day>tmanage_seconds_pointer.png</day>
+	</element>
+</dftd-display>

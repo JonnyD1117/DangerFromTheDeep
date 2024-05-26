@@ -1,0 +1,7 @@
+<dftd-popup name="sub_control_popup">
+	<element x="9" y="151">
+		<day>popup_control_daylight.jpg|png</day>
+		<night>popup_control_redlight.jpg|png</night>
+	</element>
+</dftd-popup>
+

@@ -1,0 +1,26 @@
+<dftd-display name="sub_ghg_display">
+	<day>GHG_daylight_</day>
+	<night>GHG_redlight_</night>
+	<element x="711" y="470" id="2">
+		<center x="849" y="605"/>
+		<scale pointer="0" clockwise="0">
+			<start angle="0" value="5"/>
+			<end angle="288" value="85"/>
+		</scale>
+		<file>volume_dial.png</file>
+	</element>
+	<element x="0" y="0">
+		<file>background.jpg|png</file>
+	</element>
+	<element x="783" y="550" id="3">
+		<file>volumeknob.png</file>
+	</element>
+	<element x="242" y="89" id="0">
+		<center x="376" y="372"/>
+		<file>pointer.png</file>
+	</element>
+	<element x="306" y="516" id="1">
+		<center x="373" y="583"/>
+		<file>knob.png</file>
+	</element>
+</dftd-display>

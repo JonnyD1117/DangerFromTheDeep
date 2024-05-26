@@ -1,0 +1,101 @@
+<dftd-display name="sub_gauges_display">
+	<day>daylight_controlscreen_</day>
+	<night>redlight_controlscreen_</night>
+	<element x="0" y="0">
+		<file>background.jpg</file>
+	</element>
+	<element x="35" y="451" id="1">
+		<size x="225" y="225"/>
+		<day>compass_outer_masked.png</day>
+	</element>
+	<element x="693" y="590" id="2">
+		<size x="88" y="88"/>
+		<scale pointer="270">
+			<start angle="180" value="-30"/>
+			<end angle="0" value="30"/>
+		</scale>
+		<file>pointers_bow_depth_rudder.png</file>
+	</element>
+	<element x="881" y="590" id="3">
+		<size x="88" y="88"/>
+		<scale pointer="90">
+			<start angle="0" value="30"/>
+			<end angle="180" value="-30"/>
+		</scale>
+		<file>pointers_stern_depth_rudder.png</file>
+	</element>
+	<element x="420" y="295" id="4">
+		<size x="168" y="168"/>
+		<scale pointer="270">
+			<start angle="220" value="0"/>
+			<end angle="119" value="260"/>
+		</scale>
+		<file>pointers_depth.png</file>
+	</element>
+	<element x="757" y="45" id="5">
+		<size x="94" y="94"/>
+		<scale pointer="0">
+			<start angle="228" value="0"/>
+			<end angle="130" value="22"/>
+		</scale>
+		<file>pointers_knots.png</file>
+	</element>
+	<element x="788" y="429" id="6">
+		<size x="96" y="96"/>
+		<scale pointer="0">
+			<start angle="220" value="-40"/>
+			<end angle="140" value="40"/>
+		</scale>
+		<file>pointers_main_rudder.png</file>
+	</element>
+	<element x="426" y="37" id="7">
+		<size x="158" y="158"/>
+		<scale pointer="180">
+			<start angle="30" value="0"/>
+			<end angle="330" value="15"/>
+		</scale>
+		<file>pointers_mt.png</file>
+	</element>
+	<element x="276" y="358" id="8">
+		<size x="58" y="58"/>
+		<scale pointer="315">
+			<start angle="270" value="0"/>
+			<end angle="90" value="1"/>
+		</scale>
+		<file>pointers_battery.png</file>
+	</element>
+	<element x="353" y="567" id="9">
+		<size x="76" y="76"/>
+		<scale pointer="0">
+			<start angle="240" value="0"/>
+			<end angle="120" value="1"/>
+		</scale>
+		<file>pointers_compressor.png</file>
+	</element>
+	<element x="504" y="567" id="10">
+		<size x="76" y="76"/>
+		<scale pointer="0">
+			<start angle="240" value="0"/>
+			<end angle="120" value="1"/>
+		</scale>
+		<file>pointers_diesel.png</file>
+	</element>
+	<element x="20" y="205" visible="0" id="11">
+		<day>fuseboxlight1.png</day>
+	</element>
+	<element x="82" y="205" visible="0" id="12">
+		<day>fuseboxlight2.png</day>
+	</element>
+	<element x="144" y="205" visible="0" id="13">
+		<day>fuseboxlight3.png</day>
+	</element>
+	<element x="20" y="271" visible="0" id="14">
+		<day>fuseboxlight4.png</day>
+	</element>
+	<element x="82" y="271" visible="0" id="15">
+		<day>fuseboxlight5.png</day>
+	</element>
+	<element x="144" y="271" visible="0" id="16">
+		<day>fuseboxlight6.png</day>
+	</element>
+</dftd-display>
